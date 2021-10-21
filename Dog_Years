@@ -1,0 +1,27 @@
+//storing my age as a human
+let myAge =30;
+
+//creating a variable named 'earlyYears'
+let earlyYears =2;
+
+earlyYears *= 10.5;
+
+//sbtracting 2 from the 'myAge' variable
+let laterYears = myAge-2;
+
+//multiplying laterYears by 4
+laterYears *= 4;
+
+console.log(`earlyYears = ${earlyYears}`);
+console.log(`laterYears = ${laterYears}`);
+
+//computing total ageInDogYears
+let myAgeInDogYears = earlyYears + laterYears;
+
+//converting my name to all lowercase characters
+let myName = 'Mary Seiwah Afram'.toLowerCase();
+
+//writing a statement that displays my name and age in dog years using string interpolation
+console.log(`My name is ${myName}. I am ${myAge} years old in human years which is ${myAgeInDogYears} years old in dog years.`);
+
+

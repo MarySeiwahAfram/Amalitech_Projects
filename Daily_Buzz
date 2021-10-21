@@ -22,8 +22,6 @@ $ mkdir startups/disruptors
 $ pwd
 /home/ccuser/workspace/daily-buzz/business
 $ touch startups/disruptors/tech.txt
-$ touch statups/disruptors/design.txt
-touch: cannot touch 'statups/disruptors/design.txt': No such file or directory
 $ touch startups/disruptors/design.txt
 $ touch startups/disruptors/education.txt
 $ cd ../
