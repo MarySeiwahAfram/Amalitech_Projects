@@ -10,7 +10,7 @@ $ cd elections/
 $ touch candidates.txt
 $ touch issues.txt
 $ cd ../../..
-$ pwd
+$ pwd 
 /home/ccuser/workspace/daily-buzz
 $ mkdir business
 $ cd business/
