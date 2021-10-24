@@ -1,0 +1,79 @@
+// using arrow function syntax to accept input (Rock/rock) and converting the input to lower case for unison.
+const getUserChoice = userInput => {
+  userInput = userInput.toLowerCase();
+
+   if(userInput ==='rock'|| userInput === 'paper'|| userInput ==='scissors'|| userInput === 'bomb'){
+     return userInput;
+   }else{
+     console.log('Wrong Input Please');
+   }
+}
+let randomNumber;
+function getComputerChoice(){
+  const randomNumber = Math.floor(Math.random()*3);
+  switch (randomNumber){
+    case 0:
+      return 'rock';
+      break;
+    case 1:
+      return 'paper';
+      break;
+    case 2:
+      return 'scissors';
+      break;
+  }
+}
+// Testing output to see if getComputer Choice works
+/*console.log(getComputerChoice());
+console.log(getComputerChoice());
+console.log(getComputerChoice());
+*/
+//determining a winner
+
+function determineWinner(userChoice,computerChoice){
+  if(userChoice === computerChoice){
+    return 'The game is a tie!';
+  }
+  if(userChoice === 'rock'){
+    if(computerChoice === 'paper'){
+      return 'Computer won!';
+    }else{
+      return 'You won!';
+    }
+  }
+
+if(userChoice=== 'paper'){
+  if(computerChoice ==='scissors'){
+    return 'Computer won!';
+  }else{
+    return 'You won';
+  }
+}
+
+if(userChoice === 'scissors'){
+  if(computerChoice === 'rock'){
+    return 'Computer won!';
+  }else{
+    return 'You won!';
+  }
+}
+
+if(userChoice === 'bomb'){
+  return 'You won!';
+}
+}
+
+//testing answers
+//console.log(determineWinner('scissors','paper'));
+
+function playGame(){
+  let userChoice = getUserChoice('bomb');
+  console.log('Your choice ' + userChoice);
+  let computerChoice = getComputerChoice();
+  console.log('Computer choice ' + computerChoice);
+
+  console.log(determineWinner(userChoice,computerChoice));
+}
+
+playGame();
+
