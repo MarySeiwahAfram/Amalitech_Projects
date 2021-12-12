@@ -15,7 +15,7 @@ if (runnerAge > 18 && registeredEarly=== true){
 //For runners over 18 who registered early, logging a statement to the console telling them that they will race at 9:30 am. Include their raceNumber, late registrans will race at 11am
 if (runnerAge > 18 && registeredEarly=== true){
   console.log(`Person with race number ${raceNumber} will race at 9:30am.`);
-} else if (runnerAge > 18 && registeredEarly === false){
+} else if (runnerAge > 18 && !registeredEarly){
   console.log(`Person with race number ${raceNumber} will race at 11:00am.`);
 } else if(runnerAge < 18 ){
   console.log(`Person with race number ${raceNumber} will race at 12:30pm.`)
