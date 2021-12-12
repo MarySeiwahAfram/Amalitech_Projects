@@ -1,0 +1,52 @@
+const getSleepHours = day => {
+  if (day === 'Monday'){
+    return 8;
+  }else if (day === 'Tuesday'){
+    return 6;
+  }else if (day === 'Wednesday'){
+    return 5;
+  }else if (day === 'Thursday'){
+    return 3;
+  }else if (day === 'Friday'){
+    return 5;
+  }else if (day === 'Saturday'){
+    return 6;
+  }else if (day === 'Sunday'){
+    return 7;
+  }
+}
+//testing to see if above code works
+//console.log(getSleepHours('Tuesday'));
+
+//Inside the getActualSleepHours() function, call the getSleepHours() function for each day of the week. Add the results together and return the sum using an implicit return.
+const getActualSleepHours = () => 
+  getSleepHours('Monday')+ getSleepHours('Tuesday')+getSleepHours('Wednesday')+getSleepHours('Thursday')+getSleepHours('Friday')+ getSleepHours('Saturday')+ getSleepHours('Sunday')
+
+const getIdealSleepHours = idealHours => idealHours * 7;
+/*
+const getIdealSleepHours = ()=> {
+  let idealHours = 6;
+  return idealHours * 7;
+}
+
+console.log( getActualSleepHours());
+console.log(getIdealSleepHours());
+*/
+
+const calculateSleepDebt = () => {
+  let actualSleepHours = getActualSleepHours();
+  let idealSleepHours = getIdealSleepHours(78);
+
+  if (actualSleepHours === idealSleepHours){
+  console.log('Your balance is optimal!');
+} else if (actualSleepHours > idealSleepHours){
+  console.log('Please you sleep too much! Reduce your sleep time by '+ (actualSleepHours - idealSleepHours));
+}else{
+  console.log('Try to get more sleep please! you need ' + (idealSleepHours - actualSleepHours) + ' more hours of sleep in a week.');
+}
+}
+
+calculateSleepDebt();
+
+
+
